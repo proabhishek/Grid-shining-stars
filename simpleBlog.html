@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Simple Blog</title>
+     <style>
+           .container{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 150px;
+            grid-template-rows: auto auto 1fr  auto;
+            grid-template-areas: 
+               "title title"
+               "menu sidebar"
+               "content sidebar"
+               "footer footer"
+            ;
+           }
+           .title{
+                background-color: rgb(0, 98, 255);
+                text-align: center;
+                color: white;
+                padding: 10px 0;
+                border-bottom: 2px solid black;
+                grid-area: title;
+           }
+           .menu{
+                background-color: rgb(0, 98, 255);
+                color: white;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-evenly;
+                grid-area: menu;
+           }
+           .menu a{
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+           }
+           .sidebar{
+                background-color: rgb(13, 0, 255);
+                color: white;
+                grid-area: sidebar;
+           }
+           .header{
+              grid-area: content;
+           }
+           .footer{
+                background-color: rgb(0, 98, 255);
+                color: white;
+                text-align: center;
+                grid-area: footer;
+           }
+     </style>
+</head>
+<body>
+        <div class = "container">
+            <div class="title">
+                Title
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="header">
+                <h1>Header</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit maiores dolore suscipit tenetur molestiae in aliquid inventore, repellendus quo itaque aspernatur, explicabo libero eaque. Nobis veritatis est deserunt possimus molestiae.</p>
+            </div>
+            <div class="sidebar">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias tempora ratione, magni nobis deleniti harum quod doloremque optio quas voluptates est amet architecto maiores numquam aliquam, facilis tenetur, ipsa illo.
+            </div>
+            <div class="footer">
+                Closing Notes
+            </div>
+        </div>
+</body>
+</html>
